@@ -1,0 +1,59 @@
+Functional Testing = Tip de testare care verifica daca aplicatia isi indeplineste functiile.
+
+Non-Functional Testing = Tip de testare care verifica cat de bine isi indeplineste aplicatia functiile
+-	Usability testing = tip de testare non-functionala care verifica interactiunea utilizatorului cu aplicatia si experienta pe care acesta o are.
+Experience – Based Testing  
+-	Exploratory testing
+Testarea pozitiva = Testarea cu valori care ar trebui sa fie acceptate de catre sistem.
+1.	Se verifica daca se poate realiza logarea folosind credentiale valide.
+Testare negative = Testare cu valori care NU ar trebui sa fie acceptate de catre sistem.
+2.	Se verifica faptul ca nu se poate realiza logarea folosind credentiale invalide.
+3.	Se verifica faptul ca nu se poate realiza logarea fara introducerea credentialelor.
+
+Componente test case:
+Summary = scurta descriere a ceea ce vrem sa testam si ce dorim sa obtinem (Test condition).
+Preconditii = criterii ce trebuie indeplinite pentru a putea executa testul.
+Pasi de reproducere = Instructiuni pe care trebuie sa le urmam pentru a putea executa test case-ul.
+Rezultate asteptate = Ce vrem sa obtinem in urma executarii instructiunilor.
+
+Test case 1
+Summary: Verific daca pot sa ma loghez cu, credentiale valide si user de tip ,,email”.
+Preconditii: Existenta unui user creat anterior pe site-ul vodafone.ro.
+Pasi de reproducere:
+1.	Intra pe site-ul vodafone.ro.
+2.	Hover peste iconita de account din partea dreapta-sus a paginii.
+3.	Apasa butonul ,,Intra in cont”.
+4.	Introdu credentialele (email) in text-box-ul ,,email, numar de telefon sau utilizator” si (parola) in text-box-ul  ,,parola”.
+Rezultate asteptate: Ar trebui sa ma pot loga in aplicatie si sa fiu redirectionat catre homepage.
+Rezultat actual: Same as expected.
+Test status: PASSED.
+
+Test case 2
+Summary: Verific daca pot sa ma loghez cu, credentiale valide si user de tip ,,numar de telefon”.
+Preconditii: Existenta unui user creat anterior pe site-ul vodafone.ro.
+Pasi de reproducere:
+1.	Intra pe site-ul vodafone.ro.
+2.	Hover peste iconita de account din partea dreapta-sus a paginii.
+3.	Apasa butonul ,,Intra in cont”.
+4.	Introdu credentialele (numar de telefon) in text-box-ul ,,email, numar de telefon sau utilizator” si (parola) in text-box-ul  ,,parola”.
+Rezultate asteptate: Ar trebui sa ma pot loga in aplicatie si sa fiu redirectionat catre homepage.
+Rezultat actual: Same as expected.
+Test status: PASSED.
+
+Bug report test case 3:
+Summary: Verific daca pot sa ma loghez cu credentiale valide si user de tip ,,id utilizator”.
+Preconditii: Existenta unui user creat anterior pe site-ul vodafone.ro.
+Pasi de reproducere:
+1.	Intra pe site-ul vodafone.ro.
+2.	Hover peste iconita de account din partea dreapta-sus a paginii.
+3.	Apasa butonul ,,Intra in cont”.
+4.	Introdu credentialele (id utilizator) in text-box-ul ,,email, numar de telefon sau utilizator” si (parola) in text-box-ul  ,,parola”.
+Rezultate asteptate: Ar trebui sa ma pot loga in aplicatie si sa fiu redirectionat catre homepage.
+Rezultat actual: Error, internal error has occurred. Please contact support if the error persists.
+Test status: FAILED.
+
+Dupa fixare se realizeaza doua tipuri de testare:
+-retesting = se verifica daca bug-ul a fost fixat.
+-regression testing = se verifica daca fixarea bug-ului nu a impactat functionalitatile existente care anterior mergeau.
+
+
